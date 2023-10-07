@@ -1,0 +1,88 @@
+.swiper-landing {
+  position: relative;
+  height: calc(100vh - 50px - 74.03px);
+  
+  .swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+      &::before {
+        content: "";
+        @include reset-position;
+        @include full-w-h;
+        z-index: 1;
+        background-color: rgb(3 33 53 / 22%);
+      }
+      img {
+        @include set-cover-img;
+      }
+    }
+  }
+  .btn-directions {
+    width: 40px;
+    height: 35px;
+    &::after {
+      font-size: 38px;
+      color: $white-color;
+    }
+    &.right {
+      right: 80px !important;
+    }
+    &.left {
+      left: 80px !important;
+    }
+  }
+  .swiper-pagination {
+    bottom: 50px;
+    .swiper-pagination-bullet {
+      width: 9px;
+      height: 9px;
+      background-color: $white-color;
+      opacity: 1;
+      transition: $sm-transition;
+      &.swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+.swiper-packages {
+  height: fit-content;
+  .btn-directions {
+    background-color: $main-color;
+    width: 40px;
+    height: 35px;
+    border-radius: 3px;
+    i, svg {
+      color: $white-color;
+      font-size: 20px;
+    }
+    &::after {
+      content: "" !important;
+    }
+  }
+}
+
+.swiper-news {
+  height: fit-content;
+  .swiper-wrapper {
+    .swiper-slide {
+      .box-news {
+        .news-heading {
+          padding: 20px 50px;
+        }
+      }
+    }
+  }
+  .btn-directions {
+    @include circle(30px, 30px);
+    border: 2px solid $white-color;
+    top: 94%;
+    &::after {
+      font-size: 13px;
+      color: $white-color;
+    }
+  }
+}
