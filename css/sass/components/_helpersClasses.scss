@@ -48,13 +48,3 @@
   color: #777;
 }
 // Background Color
-
-// Image gallery help
-.img-holder {
-  @include full-w-h;
-  .gallery-img {
-    @include set-cover-img;
-    height: 300px;
-    max-width: 100%;
-  }
-}
