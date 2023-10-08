@@ -1,7 +1,7 @@
 .swiper-landing {
   position: relative;
   height: calc(100vh - 50px - 74.03px);
-  
+
   .swiper-wrapper {
     .swiper-slide {
       position: relative;
@@ -14,6 +14,31 @@
       }
       img {
         @include set-cover-img;
+      }
+      .intro-text {
+        @include center-position;
+        z-index: 1;
+        @include flex-column-center;
+        color: $white-color;
+        @include maxWidth(md) {
+          white-space: nowrap;
+        }
+        .title {
+          margin-bottom: 10px;
+          font-size: 28px;
+          font-weight: 400;
+          @include maxWidth(xs) {
+            font-size: 25px;
+          }
+        }
+        .des {
+          font-weight: 400;
+          font-size: 38px;
+          margin-bottom: 0;
+          @include maxWidth(xs) {
+            font-size: 28px;
+          }
+        }
       }
     }
   }
@@ -29,6 +54,25 @@
     }
     &.left {
       left: 80px !important;
+    }
+    @include maxWidth(md) {
+      &.right {
+        right: 20px !important;
+      }
+      &.left {
+        left: 20px !important;
+      }
+    }
+    @include maxWidth(sm) {
+      &.right {
+        right: 5px !important;
+      }
+      &.left {
+        left: 5px !important;
+      }
+    }
+    @include maxWidth(xs) {
+      display: none;
     }
   }
   .swiper-pagination {

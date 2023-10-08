@@ -1,12 +1,11 @@
 .main-heading {
-  margin-bottom: 38px;
+  margin-bottom: 35px;
   font-size: 40px;
   font-weight: 700;
-  line-height: 22px;
   color: $main-color;
   text-align: center;
   &.sm-b {
-    margin-bottom: 28px;
+    margin-bottom: 15px;
   }
 }
 .main-des {
@@ -17,6 +16,24 @@
   text-align: center;
 }
 
+.shape-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 52px;
+  color: $main-color;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  .img {
+    display: block;
+    margin: 6px auto 0;
+    width: 80%;
+    max-width: 139px;
+    height: auto;
+    @include main-color-filter;
+  }
+}
 
 .small-heading {
   text-align: center;

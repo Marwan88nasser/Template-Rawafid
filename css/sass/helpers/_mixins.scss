@@ -87,6 +87,10 @@
     height: 100%;
     object-fit: cover;
 }
+// main color filter
+@mixin main-color-filter {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(40%) saturate(5137%) hue-rotate(188deg) brightness(93%) contrast(87%);
+}
 //Edit Element On Different Screens
 //min media
 @mixin minWidth($size) {
