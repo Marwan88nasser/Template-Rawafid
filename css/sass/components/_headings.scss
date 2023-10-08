@@ -1,18 +1,22 @@
 .main-heading {
-  margin-bottom: 35px;
-  font-size: 44px;
+  margin-bottom: 38px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 22px;
   color: $main-color;
   text-align: center;
+  &.sm-b {
+    margin-bottom: 28px;
+  }
 }
 .main-des {
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 30px;
+  font-size: 17px;
   color: $main-color-light;
   font-weight: 400;
   text-align: center;
 }
+
 
 .small-heading {
   text-align: center;

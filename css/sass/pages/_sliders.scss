@@ -48,41 +48,23 @@
   }
 }
 
-.swiper-packages {
+.partners-swiper {
   height: fit-content;
-  .btn-directions {
-    background-color: $main-color;
-    width: 40px;
-    height: 35px;
-    border-radius: 3px;
-    i, svg {
-      color: $white-color;
-      font-size: 20px;
-    }
-    &::after {
-      content: "" !important;
-    }
-  }
 }
 
-.swiper-news {
+.country-swiper {
   height: fit-content;
+  padding: 20px;
+  @include maxWidth(sm) {
+    padding: 10px;
+  }
   .swiper-wrapper {
     .swiper-slide {
-      .box-news {
-        .news-heading {
-          padding: 20px 50px;
+      &.swiper-slide-active {
+        .country-box {
+          box-shadow: 0 0 10px 0 rgb(17 71 107 / 20%);
         }
       }
-    }
-  }
-  .btn-directions {
-    @include circle(30px, 30px);
-    border: 2px solid $white-color;
-    top: 94%;
-    &::after {
-      font-size: 13px;
-      color: $white-color;
     }
   }
 }

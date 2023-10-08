@@ -75,9 +75,9 @@
   left: 0%;
 }
 // reset circle
-@mixin circle($width, $height) {
-    width: $width;
-    height: $height;
+@mixin circle($dimensions) {
+    width: $dimensions;
+    height: $dimensions;
     border-radius: 50%;
 }
 

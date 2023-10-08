@@ -16,7 +16,7 @@
     }
   }
   .title {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 22px;
@@ -62,7 +62,7 @@
     z-index: 12;
   }
   &::before {
-    content: '';
+    content: "";
     @include reset-position;
     @include full-w-h;
     background: linear-gradient(0deg, rgb(0 0 0 / 72%), transparent);
@@ -75,41 +75,118 @@
   }
 }
 
-.fit-box {
-  color: $white-color;
-  .title {
-    color: $white-color;
-    margin-bottom: 25px;
-    font-weight: 600;
-    font-size: 35px;
+.box-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  .content-text {
+    .title {
+      color: $main-color;
+      font-weight: 600;
+      font-size: 23px;
+      font-weight: 400;
+    }
+    .des {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      margin-bottom: 10px;
+      color: $main-color-light;
+    }
   }
-  .list-fit {
-    li {
-      &:not(:last-child) {
-        margin-bottom: 10px;
+}
+
+.operation-box {
+  @include flex-column-center;
+  min-height: 260px;
+  text-align: center;
+  padding: 5px;
+  .img-holder {
+    @include flex-center;
+    @include circle(180px);
+    margin-bottom: 20px;
+    background-color: $white-color;
+    transition: $sm-transition;
+    img {
+      transition: $sm-transition;
+      width: 95px;
+      &.won-custom {
+        width: 110px;
       }
-      font-size: 15px;
-      i,
-      svg {
-        margin-left: 6px;
-        color: $main-color;
-        font-size: 18px;
+    }
+  }
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    color: $main-color;
+  }
+  .des {
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: $main-color-light;
+  }
+  &.active,
+  &:hover {
+    .img-holder {
+      background-color: $main-color;
+      img {
+        filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%)
+          hue-rotate(308deg) brightness(101%) contrast(103%);
       }
     }
   }
 }
 
-.box-video {
+.country-box {
+  @include flex-column-center;
+  min-height: 240px;
+  padding: 5px;
+  border-radius: 23px;
   text-align: center;
-  @include full-w-h;
-  .video-holder {
-    margin-bottom: 10px;
-    iframe {
-      @include full-w-h;
+  transition: $sm-transition;
+  background-color: $white-color;
+  border: 2px solid #f5f8f9;
+  .img-holder {
+    @include flex-center;
+    min-height: 100px;
+    margin-bottom: 15px;
+    img {
+      width: 140px;
+      height: auto;
+      object-fit: contain;
     }
   }
   .title {
-    color: $white-color;
-    font-size: 14px;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-align: center;
+    color: $main-color;
+  }
+  &:hover {
+    box-shadow: 0 0 10px 0 rgb(17 71 107 / 10%);
+  }
+}
+
+.partner-box {
+  @include flex-column-center;
+  min-height: 200px;
+  padding: 5px;
+  text-align: center;
+  background-color: $white-color;
+  img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    &.won-custom {
+      width: 200px;
+    }
   }
 }
